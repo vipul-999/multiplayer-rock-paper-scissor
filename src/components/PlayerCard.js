@@ -1,30 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { joinGame, setCurrentPlayer } from '../reducers/gameSlice';
-import '../styles/PlayerCard.css'; // Import the CSS file
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { joinGame, setCurrentPlayer } from "../reducers/gameSlice";
+import "../styles/PlayerCard.css";
 
 const PlayerCard = () => {
   const currentPlayer = useSelector((state) => state.game.currentPlayer);
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
 
   const handleJoin = () => {
     if (username.trim()) {
       dispatch(joinGame({ username }));
-      // localStorage.setItem('username', username);
+      setError(""); 
+    } else {
+      setError("Username cannot be empty");
     }
   };
 
-  //to retain current tab user
-  useEffect(()=>{
-    if(window.name!==''){
-      dispatch(setCurrentPlayer({ username:window.name }));
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleJoin();
     }
-  },[])
-  
+  };
 
-  // Only show the PlayerCard if no player has joined yet (username is empty)
-  if (currentPlayer.username!='') {
+  useEffect(() => {
+    if (window.name !== "") {
+      dispatch(setCurrentPlayer({ username: window.name }));
+    }
+  }, [dispatch]);
+
+  if (currentPlayer.username !== "") {
     return null;
   }
 
@@ -37,7 +43,9 @@ const PlayerCard = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter your username"
+          onKeyPress={handleKeyPress}
         />
+        {error && <p className="error">{error}</p>}
         <button onClick={handleJoin}>Join</button>
       </div>
     </div>

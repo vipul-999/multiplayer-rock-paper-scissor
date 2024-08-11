@@ -1,118 +1,116 @@
 /* Overall game container */
 .game-container {
-    
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    color: black;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+.players-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Player sections */
+.player-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  text-align: center;
+}
+
+.player1-section {
+  background-color: #e0f7fa;
+}
+
+.player2-section {
+  background-color: #ffebee;
+}
+
+/* Choice buttons */
+.choices {
+  margin-top: 10px;
+}
+
+.choice-button {
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.choice-button img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.choice-button img:hover {
+  transform: scale(1.2);
+}
+
+/* Result section */
+.result {
+  text-align: center;
+  margin-top: 20px;
+  /* height: 50px; */
+}
+
+/* Rotating image */
+.rotating-image {
+  margin: auto;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .players-section{
-    display: flex;
-    justify-content: space-between;
+  to {
+    transform: rotate(360deg);
   }
-  
-  /* Player sections */
-  .player-section {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 10px;
-    text-align: center;
-  }
-  
-  .player1-section {
-    background-color: #e0f7fa;
-  }
-  
-  .player2-section {
-    background-color: #ffebee;
-  }
-  
-  /* Choice buttons */
-  .choices {
-    margin-top: 10px;
-  }
-  
-  .choice-button {
-    margin: 5px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .choice-button img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .choice-button img:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Result section */
-  .result {
-    text-align: center;
-    margin-top: 20px;
-    /* height: 50px; */
-  }
-  
-  /* Rotating image */
-  .rotating-image {
-    margin: auto;
-    margin-top: 10px;
-    width: 50px;
-    height: 50px;
-    animation: rotate 2s linear infinite;
-  }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* Choice icon */
-  .choice-icon {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-  }
-  
-  .result-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .play-again-button,
-  .end-game-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .play-again-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .end-game-button {
-    background-color: #dc3545;
-  }
-  
-  .end-game-button:hover {
-    background-color: #c82333;
-  }
-  
+}
+
+/* Choice icon */
+.choice-icon {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.play-again-button,
+.end-game-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.play-again-button:hover {
+  background-color: #0056b3;
+}
+
+.end-game-button {
+  background-color: #dc3545;
+}
+
+.end-game-button:hover {
+  background-color: #c82333;
+}

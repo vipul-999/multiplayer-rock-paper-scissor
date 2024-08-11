@@ -1,0 +1,22 @@
+/* Leaderboard.css */
+.highlight {
+  animation: highlightAnimation 1s ease;
+  /* font-weight: bold; */
+  /* color: gold; */
+}
+
+@keyframes highlightAnimation {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.error {
+  color: red;
+}

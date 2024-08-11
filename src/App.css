@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #1e1e1e;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #f5f5f5;
 }
 
@@ -17,12 +17,24 @@ body {
 }
 
 @keyframes blink {
-  0% { color: #ff4757; }
-  20% { color: #3742fa; }
-  40% { color: #2ed573; }
-  60% { color: #ffa502; }
-  80% { color: #5352ed; }
-  100% { color: #ff4757; }
+  0% {
+    color: #ff4757;
+  }
+  20% {
+    color: #3742fa;
+  }
+  40% {
+    color: #2ed573;
+  }
+  60% {
+    color: #ffa502;
+  }
+  80% {
+    color: #5352ed;
+  }
+  100% {
+    color: #ff4757;
+  }
 }
 
 .blinking-text {
@@ -48,7 +60,7 @@ body {
 /* Frill effect on left and right sides */
 .container::before,
 .container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -91,7 +103,8 @@ body {
 }
 
 /* Leaderboard and waiting list sections */
-.leaderboard, .waiting-list {
+.leaderboard,
+.waiting-list {
   max-height: 200px;
   overflow-y: auto;
   margin-bottom: 20px;
@@ -103,7 +116,8 @@ body {
 }
 
 /* Styling for list items */
-.leaderboard li, .waiting-list li {
+.leaderboard li,
+.waiting-list li {
   list-style: none;
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -111,7 +125,8 @@ body {
   justify-content: space-between;
 }
 
-.leaderboard li:last-child, .waiting-list li:last-child {
+.leaderboard li:last-child,
+.waiting-list li:last-child {
   border-bottom: none;
 }
 
@@ -152,4 +167,56 @@ body {
 
 .reset-button:hover {
   background-color: #ff4500;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .game {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  .leaderboard,
+  .waiting-list {
+    max-height: none;
+    margin-bottom: 10px;
+  }
+
+  .blinking-text {
+    font-size: 2rem;
+  }
+
+  .reset-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .blinking-text {
+    font-size: 1.8rem;
+  }
+
+  .reset-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 }

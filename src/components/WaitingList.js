@@ -1,6 +1,6 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { removeFromWaitingList, startGame } from '../reducers/gameSlice';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromWaitingList, startGame } from "../reducers/gameSlice";
 
 const WaitingList = () => {
   const waitingList = useSelector((state) => state.game.waitingList);
@@ -8,7 +8,7 @@ const WaitingList = () => {
   const dispatch = useDispatch();
 
   const handleStartGame = (player1, player2) => {
-    dispatch(startGame({player1:player1, player2:player2}));
+    dispatch(startGame({ player1: player1, player2: player2 }));
     dispatch(removeFromWaitingList(player2));
   };
 
@@ -21,9 +21,7 @@ const WaitingList = () => {
             <li key={index}>
               {player.username}
               {players.length > 0 && (
-                <button
-                  onClick={() => handleStartGame(players[0], player)}
-                >
+                <button onClick={() => handleStartGame(players[0], player)}>
                   Play
                 </button>
               )}
