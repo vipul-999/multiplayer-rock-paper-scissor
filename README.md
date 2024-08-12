@@ -19,7 +19,11 @@ The Rock-Paper-Scissors Multiplayer App is a real-time web application that allo
 - **Styles:** CSS (with custom animations and responsive design)
 
 ## Screenshots
-To-Do
+<img width="1196" alt="Screenshot 2024-08-12 at 5 35 27 AM" src="https://github.com/user-attachments/assets/c5f9e3bc-7db9-4e10-bf2a-0c91e4af81c8">
+<img width="1191" alt="Screenshot 2024-08-12 at 5 35 13 AM" src="https://github.com/user-attachments/assets/b972f7b8-eae1-4411-9fd6-0bca47d5bebd">
+<img width="1195" alt="Screenshot 2024-08-12 at 5 34 54 AM" src="https://github.com/user-attachments/assets/bf443a7e-3a66-4a52-9d6f-4cf45e8b9e8b">
+<img width="1200" alt="Screenshot 2024-08-12 at 5 34 16 AM" src="https://github.com/user-attachments/assets/b2b58870-5993-450b-8752-94a17ed0a0b4">
+
 
 ## Prerequisites
 
