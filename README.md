@@ -5,6 +5,8 @@ https://vipul-999.github.io/multiplayer-rock-paper-scissor/
 
 The Rock-Paper-Scissors Multiplayer App is a real-time web application that allows multiple players to engage in the classic game of Rock-Paper-Scissors. The app is built using React and Redux for state management, and it supports multiplayer functionality with a leaderboard, player waitlist, and real-time game updates.
 
+Note: Need atleast 2 players to start the game.
+
 ## Features
 
 - **Multiplayer Support:** Multiple players can join the game, challenge each other, and play Rock-Paper-Scissors in real-time.
