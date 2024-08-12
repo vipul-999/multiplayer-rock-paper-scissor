@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Rock-Paper-Scissors Multiplayer App
+https://vipul-999.github.io/multiplayer-rock-paper-scissor/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Rock-Paper-Scissors Multiplayer App is a real-time web application that allows multiple players to engage in the classic game of Rock-Paper-Scissors. The app is built using React and Redux for state management, and it supports multiplayer functionality with a leaderboard, player waitlist, and real-time game updates.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Multiplayer Support:** Multiple players can join the game, challenge each other, and play Rock-Paper-Scissors in real-time.
+- **Lobby & Waitlist:** Players can join a lobby and wait for other players to start a game. Players already in a game will see others in the waitlist.
+- **Leaderboard:** The app tracks scores and displays a leaderboard of players based on their win count.
+- **Real-Time Gameplay:** The app updates in real-time, showing the choices of players and the game result after each round.
+- **Reset Functionality:** The app includes a reset button that resets the game state, allowing players to start fresh.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React, Redux
+- **Styles:** CSS (with custom animations and responsive design)
 
-### `npm test`
+## Screenshots
+To-Do
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+Ensure you have the following installed on your system:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Node.js** (v12+)
+- **npm** (v6+)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm run eject`
+### 1. Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/vipul-999/multiplayer-rock-paper-scissor.git
+cd multiplayer-rock-paper-scissor
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Running the Application
+To start the development server, use the following command:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
+This will start the app in development mode. Open http://localhost:3000 in your browser to view it.
 
-## Learn More
+The page will reload automatically if you make edits to the code. You will also see any lint errors in the console.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- /src: Contains all the source code for the app.
+    - /actions: Redux actions for handling various game-related tasks.
+    - /compo nents: Reusable UI components such as Game, PlayerCard, Leaderboard, etc.
+    - /reducers: Redux reducers for managing the state of the app.
+    - /styles: CSS files for styling the components.
+    - /assets: Images and other static assets used in the app.
+- /public: Public directory containing the HTML file and other static resources.
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Join the Game**: Enter your username and join the lobby.
+2. **Challenge a Player**: Select a player from the waitlist and start a game.
+3. **Make Your Choice**: Choose between Rock, Paper, or Scissors.
+4. **View the Result**: See the game result and challenge the same or another player again.
+5. **Track Your Score**: View the leaderboard to see your rank among other players.
+6. **Reset the Game**: Use the reset button to clear the game state and start fresh.
 
-### Analyzing the Bundle Size
+## Error Handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app includes error handling to manage issues like network errors, game state inconsistencies, and input validation. If any error occurs, an appropriate message will be displayed to the user.
 
-### Making a Progressive Web App
+## Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The app is fully responsive, ensuring a seamless experience on both desktop and mobile devices. The UI adjusts dynamically to provide the best possible layout depending on the screen size.
 
-### Advanced Configuration
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Persistent State:** Save the state of the game and leaderboard in a database so that the app can retain information across sessions.
+- **Chat Feature:** Add a chat functionality for players to communicate while playing.
+- **Enhanced Animations:** Add more interactive and engaging animations for a better user experience.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
